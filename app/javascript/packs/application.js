@@ -35,4 +35,27 @@ document.addEventListener("turbolinks:load", () => {
       displayError.textContent = ''
     }
   })
+
+  const form = document.querySelector("#payment-form")
+  form.addEventListener("submit", (event) => {
+    event.preventDefault()
+
+    let data = {
+      payment_method: {
+        card: card,
+        billing_details: {
+          name: form.querySelector("#name_on_card").value
+        }
+      }
+    }
+
+    stripe.confirmCardPayment(form.dataset.paymentIntentId, data).then((result) => {
+      if (result.error) {
+        var errorElement = document.getElementById('card-errors')
+        errorElement.textContent = result.error.message
+      } else {
+        form.submit()
+      }
+    })
+  })
 })
