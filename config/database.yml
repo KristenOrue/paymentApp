@@ -6,6 +6,8 @@
 #   gem install pg -- --with-pg-config=/usr/local/bin/pg_config
 # On macOS with MacPorts:
 #   gem install pg -- --with-pg-config=/opt/local/lib/postgresql84/bin/pg_config
+# On macOS with Postgres APP:
+#   gem install pg -- --with-pg-config=/Applications/Postgres.app/Contents/Versions/latest/bin/pg_config
 # On Windows:
 #   gem install pg
 #       Choose the win32 build.

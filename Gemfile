@@ -21,6 +21,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+# gem 'stripe', '~> 5.7', '>= 5.7.1'
+gem 'stripe', '~> 5.32', '>= 5.32.1'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
